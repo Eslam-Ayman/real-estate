@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "JeCustomerLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en" ng-app="tasks">
+    <head>
+        <!-- <base href="/"> -->
+        <meta charset="utf-8" />
+        <!-- this meta for IE cmbatabilty -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- this meta for resposive for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>@ViewBag.Title - Real Estate</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        @Styles.Render("~/Content/themes/base/css")
+        @Styles.Render("~/Content/css")
+    </head>
+    <body style="margin-top:58px">
+        <div ng-controller="sign">
+            <!--   *******************     user navbar    ************************  -->
+            <nav class="navbar navbar-inverse nav-color navbar-fixed-top" ng-controller="sign" ng-if="true">
+            <header>
+                  <a href="#" class="btn btn-default" style="padding: 0px;margin-top: 6px;">
+                          <i class="fa fa-facebook-square fa-lg face"></i>
+                      </a>
+                  <a href="#" class="btn btn-default">
+                          <i class="fa fa-envelope fa-lg"></i>
+                          <span>info@business.com</span>
+                      </a>
+                      <a href="#" class="btn btn-default" style="border-right: 1px solid #333;">
+                          <i class="fa fa-mobile fa-lg"></i>
+                          <span>63373128</span>
+                      </a>
+
+                      <a class="navbar-brand" href="#/home"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;Real Estate</a>
+                </header>
+                  <div class="container-fluid">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <!-- <a class="navbar-brand" href="#/home"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;Real Estate</a> -->
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="max-height:initial">
+                      <ul class="nav navbar-nav navbar-left">
+                        <li ng-class="{active:nav.checkTab(1)}"><a href="#/mustDo" ng-click="nav.setTab(1)"><i class="fa fa-table"></i> All Current</a></li>
+                        <li ng-class="{active:nav.checkTab(2)}"><a href="#/done" ng-click="nav.setTab(2)"><i class="fa fa-check-square-o"></i> Previous Projects</a></li>
+                        <li ng-class="{active:nav.checkTab(3)}"><a href="#/trash" ng-click="nav.setTab(3)"><i class="fa fa-trash-o"></i> All Requests</a></li>
+                        <li ng-class="{active:nav.checkTab(4)}"><a href="#/members" ng-click="nav.setTab(4)"><i class="fa fa-users"></i> Admin Control</a></li>
+                        <li ng-class="{active:nav.checkTab(5)}"><a href="#/comments" ng-click="nav.setTab(5)"><i class="fa fa-comments-o"></i> PM &amp; TL Control</a></li>
+                        <li ng-class="{active:nav.checkTab(6)}"><a href="#/chat" ng-click="nav.setTab(6)"><i class="fa fa-envelope-o"></i> Chat</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="" id="sinup" ng-click="logout()">Sign Out</a></li>
+                        <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell fa-lg"></i></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">Ahmed put new carde</a></li>
+                    <li><a href="#">Date of carde-1 has expired</a></li>
+                    <li><a href="#">Eslam has added new member</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">See More ...</a></li>
+                    </ul>
+                  </li>
+                        <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#/mustDo">{{$storage.data.username}}</a></li>
+                    <li><a href="#">{{$storage.data.email}}</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">+20-{{$storage.data.phone}}</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#/profile" data-toggle="tooltip" data-placement="bottom" title="Profile Setting"><i class="fa fa-cog fa-lg" aria-hidden="true"></i></a>
+                  </li>
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+              </nav>
+              <!--   *******************    user  asidebare    ************************  -->
+                <div class="container-fluid" ng-controller="side-tabs as nav" ng-if="true" >
+                <div class="row">
+                <aside class="col-xs-6 col-sm-3 col-md-2 sidebar" ng-if="true" style="bottom:0">
+                        <i class="fa fa-angle-double-right fa-3x" aria-hidden="true"></i>
+                    <form class="form-inline" role="search">
+                        <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." />
+                        <span class="input-group-btn">
+                        <button type="submit" class="btn btn-srch">Search</button>
+                        </span>
+                        </div>
+                    </form>
+                    <div class="col-xs-12 text-center profile">
+                       <img src="/Images/avatar-1.png" alt="profil-img" class="img-responsive center-block"data-toggle="modal" data-target="#photo" />
+                       <!-- <button type="button" class="btn btn-srch btn-profile" data-toggle="modal" data-target="#photo"><i class="fa fa-sliders" aria-hidden="true"></i>Change Your Picture</button> -->
+                       <p class=""><i class="fa fa-mobile fa-2x" aria-hidden="true"></i> mobile : 011321564</p>
+                       <p class=""><i class="fa fa-phone fa-2x" aria-hidden="true"></i> tele. : 3465845</p>
+                       <p class=""><i class="fa fa-envelope fa-1x" aria-hidden="true"></i> email : example@example.com</p>
+                   </div>
+      
+                   @* <ul class="nav nav-sidebar">
+                    <li ng-class="{active:nav.checkTab(1)}"><a href="#/mustDo" ng-click="nav.setTab(1)"><i class="fa fa-table"></i>All Current</a></li>
+                    <li ng-class="{active:nav.checkTab(2)}"><a href="#/done" ng-click="nav.setTab(2)"><i class="fa fa-check-square-o"></i>Previous Projects</a></li>
+                    <li ng-class="{active:nav.checkTab(3)}"><a href="#/trash" ng-click="nav.setTab(3)"><i class="fa fa-trash-o"></i> All Requests</a></li>
+                    </ul>
+      
+                    <ul class="nav nav-sidebar">
+                    <li ng-class="{active:nav.checkTab(4)}"><a href="#/members" ng-click="nav.setTab(4)"><i class="fa fa-users"></i>Admin Control</a></li>
+                    <li ng-class="{active:nav.checkTab(5)}"><a href="#/comments" ng-click="nav.setTab(5)"><i class="fa fa-comments-o"></i>PM &amp; TL Control</a></li>
+                    <li ng-class="{active:nav.checkTab(6)}"><a href="#/chat" ng-click="nav.setTab(6)"><i class="fa fa-envelope-o"></i>Chat</a></li>
+                    </ul>*@
+
+                        <div class="ftr T-FOOTER text-center">
+                            <div id="T-a">
+                                <a href="#"><i class="fa fa-facebook fa-lg" id="T-i1"></i></a>
+                                <a href="#"><i class="fa fa-twitter fa-lg" id="T-i2"></i></a>
+                                <a href="#"><i class="fa fa-google-plus fa-lg" id="T-i3"></i></a>
+                                <a href="#"><i class="fa fa-instagram fa-lg" id="T-i4"></i></a>
+                            </div>
+                            <span>&copy; All rights are resieved for TASKS 2016</span>
+                            </div>
+                    </aside>
+            <!--  *************************      content section     ************************************   -->
+                    <section ng-if="true" class="content col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" style="margin-bottom: 100px;">
+                        <div class="row">
+                        <div class="col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4 text-center profile">
+                            <img src="/Images/avatar-1.png" alt="profil-img" class="img-responsive center-block"data-toggle="modal" data-target="#photo" />
+                            <!-- <button type="button" class="btn btn-srch btn-profile" data-toggle="modal" data-target="#photo"><i class="fa fa-sliders" aria-hidden="true"></i>Change Your Picture</button> -->
+                            <p class=""><i class="fa fa-mobile fa-2x" aria-hidden="true"></i> mobile : 011321564</p>
+                            <p class=""><i class="fa fa-phone fa-2x" aria-hidden="true"></i> tele. : 3465845</p>
+                            <p class=""><i class="fa fa-envelope fa-1x" aria-hidden="true"></i> email : example@example.com</p>
+                        </div>
+                        </div>
+                        @RenderBody()
+                    </section>
+                    
+                    
+                </div><!-- /.row of this page -->
+            </div><!-- /.container-fluid -->
+            
+
+        </div><!-- sign-controller -->
+
+        @Scripts.Render("~/bundles/js")
+        @RenderSection("scripts", required: false)
+
+        <script type="text/javascript">
+            // alert(location.path());
+            $(document).ready(function () {
+                $('.modal').addClass('.in');
+                $('.fade').css('opacity', '1');
+                $('.modal').css('display', 'block');
+                $('.sidebar > i').click(function () {
+                    // $(this).toggleClass('fa-angle-double-right','fa-window-close-o',1000, "easeInOutQuad");
+                    $(this).toggleClass('fa-angle-double-right').toggleClass('fa-window-close-o');
+                    $('.fa-window-close-o').css('font-size', '2em');
+                    $('.fa-angle-double-right').css('font-size', '3em');
+                    $('.sidebar').toggleClass('pushmenu-open');
+                });
+            });
+        </script>
+    </body>
+</html>
+
+

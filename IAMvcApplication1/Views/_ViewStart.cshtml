@@ -1,0 +1,21 @@
+﻿@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+@{
+ var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+  string cLayout = "";
+ if (controller == "Boss") {
+     cLayout = "~/Views/Shared/_AdminPmTlLayout.cshtml";
+ }
+ else if (controller == "JeCustomer") {
+     cLayout = "~/Views/Shared/_JeCustomerLayout.cshtml";
+ }
+ else {
+ cLayout = "~/Views/Shared/_Layout.cshtml";
+ }
+ Layout = cLayout;
+}
+
+@* that link to run several layouts in ine projects *@
+@*http://www.dotnet-stuff.com/tutorials/aspnet-mvc/how-to-render-different-layout-in-asp-net-mvc*@

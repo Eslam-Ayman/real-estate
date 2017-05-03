@@ -1,0 +1,315 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+            </p>
+        </div>
+    </section>
+}*@
+@*<h3>We suggest the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Getting Started</h5>
+        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+        enables a clean separation of concerns and that gives you full control over markup
+        for enjoyable, agile development. ASP.NET MVC includes many features that enable
+        fast, TDD-friendly development for creating sophisticated applications that use
+        the latest web standards.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
+    </li>
+
+    <li class="two">
+        <h5>Add NuGet packages and jump-start your coding</h5>
+        NuGet makes it easy to install and update free libraries and tools.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
+    </li>
+
+    <li class="three">
+        <h5>Find Web Hosting</h5>
+        You can easily find a web hosting company that offers the right mix of features
+        and price for your applications.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
+    </li>
+</ol>*@
+
+<div class="container-fluid">
+  
+  <section class="row home-two">
+    <div class="col-md-6 home-form">
+			<h1>Post proj</h1>
+			<h4>~~~~~~ :: ~~~~~~</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br>
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+			<div id="contactme" class="home-contact ">
+          <form action="#" method="get">
+          
+            <input type="text" name="NAME" placeholder="NAME">
+            <input type="text" name="EMAIL ADDRESS" placeholder="EMAIL ADDRESS">
+            <label>MESSAGE</label>
+            <textarea wrap='off'></textarea>
+            <input type="submit" value="Submit">
+    
+        </form>
+      </div>
+    <!-- *******   posts    ********* -->
+    <aside class="col-md-6">
+         <fieldset>
+          <legend>&nbsp; All Projects &nbsp;</legend>
+         </fieldset>
+         <div class="container-fluid">
+           <div class="row news-row">
+             <div class="col-xs-4 " style="background-image: url('/Images/man-1.jpg');background-size:100% 100%;height: 75px;"></div>
+             <div class="col-xs-8 ">
+              <b>Project Name :</b> mosque <br/>
+              <b>discription :</b> need to contruct to bulding mosque...
+              <h6>13,2016 march</h6>
+             </div>
+           </div>
+           <div class="row news-row">
+             <div class="col-xs-4 " style="background-image: url('/Images/man-2.jpg');background-size:100% 100%;height: 75px;"></div>
+             <div class="col-xs-8 ">
+              <b>Project Name :</b> mosque <br/>
+              <b>discription :</b> need to contruct to bulding mosque...
+              <h6>13,2016 march</h6>
+             </div>
+           </div>
+           <div class="row news-row">
+             <div class="col-xs-4 " style="background-image: url('/Images/man-3.jpg');background-size:100% 100%;height: 75px;"></div>
+             <div class="col-xs-8 ">
+              <b>Project Name :</b> mosque <br/>
+              <b>discription :</b> need to contruct to bulding mosque...
+              <h6>13,2016 march</h6>
+             </div>
+           </div>
+           <div class="row news-row">
+             <div class="col-xs-4 " style="background-image: url('/Images/man-4.jpg');background-size:100% 100%;height: 75px;"></div>
+             <div class="col-xs-8 ">
+              <b>Project Name :</b> mosque <br/>
+              <b>discription :</b> need to contruct to bulding mosque...
+              <h6>13,2016 march</h6>
+             </div>
+           </div>
+           <div class="row news-row">
+             <div class="col-xs-4 " style="background-image: url('/Images/man-5.jpg');background-size:100% 100%;height: 75px;"></div>
+             <div class="col-xs-8 ">
+              <b>Project Name :</b> mosque <br/>
+              <b>discription :</b> need to contruct to bulding mosque...
+              <h6>13,2016 march</h6>
+             </div>
+           </div>
+           <div class="row news-row">
+             <a href="#" class="col-xs-6 col-xs-push-3" align="center">Read More</a>
+           </div>
+         </div>
+      </aside>
+  </section>
+  
+<!--   *******************     sign in model    ************************  -->
+    @*@section featured {*@
+  <div class="modal fade bs-example-modal-lg" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="signin">sign in</h4>
+      </div>
+      <div class="modal-body">
+        <div class="wrapper" style="background-color: rgb(0, 111, 113); width: 100%; height: 630px;">
+          <div class="container-fluid">
+              <div class="row sign">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                      <img src="/Images/ribbon.png" alt="logo" style="height: 140px;width: 250px;margin: auto;margin-bottom: -14px;"
+                       class="col-sm-offset-2 img-responsive ribbon">
+                       <fieldset>
+                          <legend></legend>
+                          <img src="/Images/tasktracker-logo.png" alt="logo" class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 img-responsive">
+
+                        <form class="container-fluid">
+                          <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                              <input ng-model="email" required="required" name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="example@example.com">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-9">
+                              <input ng-model="password" required="required" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2">Checkbox</label>
+                            <div class="col-sm-9 col-sm-offset-1">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox"> let me signin
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                              <button  data-dismiss="modal" ng-click="signin(email,password)" name="submit" type="submit" value="login" class="btn btn-primary col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">Sign IN</button>
+                          </div>
+                        </form>
+                      </fieldset>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+@*}*@
+
+<!--   *******************     sign up model    ************************  -->
+  <div class="modal fade bs-example-modal-lg" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="signup">sign Up</h4>
+      </div>
+      <div class="modal-body">
+        <div class="wrapper" style="background-color: rgb(0, 111, 113); width: 100%; height: 1028px;">
+          <div class="container-fluid">
+              <div class="row sign">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                      <img src="/Images/ribbon.png" alt="logo" style="height: 140px;width: 250px;margin: auto;margin-bottom: -14px;"
+                       class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 img-responsive ribbon">
+                       <fieldset>
+                          <legend></legend>
+                          <img src="/Images/tasktracker-logo.png" alt="logo" class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 img-responsive">
+
+                        <form class="container-fluid" method="post" action="">
+                          <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 col-form-label">Username</label>
+                  <div class="col-sm-9">
+                    <input  type="text" class="form-control" id="username1"
+                            name="username" placeholder="spiderman">
+                </div>
+              </div>
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label">Email</label>
+                  <div class="col-sm-9">
+                    <input  type="text" class="form-control" id="email1" 
+                                        name="email" placeholder="example@example.com"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+                  <div class="col-sm-9">
+                      <input  type="password" class="form-control" id="password1"
+                                            name="password" placeholder="Password">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label">Confirm password</label>
+                  <div class="col-sm-9">
+                    <input  type="password" class="form-control" id="confirm_password"
+                                     name="confirm_password" placeholder="Confirm_password"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label">Birth Date</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control" id="Birth" 
+                                       name="birthdate" placeholder="Birth_Date"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label">Phone Number</label>
+                  <div class="col-sm-9">
+                    <input  type="number" class="form-control" id="Phone"
+                                        name="phone" placeholder="0123456789"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label">Country</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Country" 
+                                       name="country" placeholder="England"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2">Checkbox</label>
+                  <div class="col-sm-8 col-sm-offset-1">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> police
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <img src="/Images/captcha.jpg" style="width: 200; height: 50; border: 0;">
+                <input type="text" name="captcha" placeholder="type"/>
+                <div class="form-group row">
+                    <button  name="submit" type="submit" value="login" class="btn btn-primary col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">Sign IN</button>
+                </div>
+                        </form>
+                      </fieldset>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!--    details   section    -->
+    <section class="jumbotron touch text-center" id="touch">
+      <div class="container">
+        <h2>Git in touch</h2>
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#" class="col-xs-btn-lg"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+            <a href="#" class="col-xs-btn-lg"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></i></a>
+            <a href="#" class="col-xs-btn-lg"><i class=" fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+            <a href="#" class="col-xs-btn-lg"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></i></a>
+          </div>
+          
+          <small class="col-xs-12 lead">Subscribe to our newsletter to stay update with what is new</small>
+          
+          <form class="col-xs-8 col-xs-offset-2 ">
+                <div class="form-group">
+                  <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email Address">
+                </div>
+                <button type="submit" class="btn btn-default btn-lg">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+      <footer class="jumbotron text-center footer">
+          <small class="lead">Cssauther.com &copy; 2014 All Rights Reserved</small>
+      </footer>
